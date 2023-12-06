@@ -1,4 +1,4 @@
-package springcourses;
+package springCourses;
 
 public class ClassicalMusic implements Music {
     @Override

@@ -1,4 +1,4 @@
-package springcourses;
+package springCourses;
 
 public class RockMusic implements Music {
     @Override
