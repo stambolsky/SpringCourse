@@ -10,7 +10,10 @@
     <context:property-placeholder location="classpath:musicPlayer.properties" />
 
     <bean id="musicBean"
-          class="springCourses.ClassicalMusic">
+          class="springCourses.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
     <bean id="musicBean2"
@@ -22,7 +25,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="springCourses.MusicPlayer">
+          class="springCourses.MusicPlayer"
+          scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="musicBean"/>
